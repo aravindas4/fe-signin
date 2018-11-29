@@ -20,7 +20,7 @@ section {
 }
 
 :root {
-	--hue: 590;
+	--hue: 390;
 	--sat: 100;
 	--light: 70;
 }
@@ -50,7 +50,7 @@ header {
 }
 
 .nav_list {
-	width: 30%;
+	width: 100%;
 }
 
 .header-items {
@@ -61,7 +61,7 @@ header {
 	text-align: center;
 	padding: 2% 1%;
 	
-	list-style-type: none;
+	
 	padding-bottom: 2%;
 }
 
@@ -85,25 +85,35 @@ header {
 	justify-content: center;
 }
 
-.links {
+.nav_list .links {
 	display: flex;
+	flex-direction:row;
 	justify-content: center;
 	/*border: 1px solid #fff;*/
-	padding: 1% 10%;
-	
+	padding: 3% 10% 1%; 
 	width: 100%;
 	flex-wrap: wrap;
-	margin-top: 1em;
+	/*margin-top: 1em;*/
+	list-style-type: none;
+	height: 100%;
 }
 
-.links > li {
-	display: inline;
+.nav_button {
+	display: none;
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+}
+.nav_list .links > li {
+	
   	margin-right: 1em;
   	padding: 0.1em 0.5em;
   	margin-top: 1px;
 	border-radius: 10px;
 	margin-bottom: 1px;
 	height: 60%;
+	/*width: 100%;*/
+	
 }
 
 .links > li:hover {
@@ -209,14 +219,52 @@ a:hover:visited {
 	justify-content: flex-end;
 }
 	
-	.hamburg {
+	.nav_button {
 		
 	display: flex;
 	width: 40%;
 	justify-content: center;
 	}	
 
-	
+	.nav_list {
+		/*z-index: 10;*/
+		top: 100%;
+		width: 60%;
+		height: 70%;
+		right: 100%;
+    	position: absolute;
+    /* This trasform moves the \ off canvas. */
+    	/*-webkit-transform: translate(-300px, 0);*/
+    	transform: translate(-900, 0);
+    /* Optionally, we animate the drawer. */
+    	transition: transform 3s ease;
+    	background-color: red;
+		/*z-index: -10;*/
+		overflow: hidden;
+	}
+
+	.nav_list .links {
+		display: flex;
+    	flex-direction: column;
+    	height: 1em;
+	}	
+
+	.nav_list .links > li{
+		height: 10%;
+	}
+
+	.nav_list.open {
+		z-index: 10;
+		width: 300px;
+    	position: absolute;
+    	left: 30%;
+    /* This trasform moves the \ off canvas. */
+    	/*-webkit-transform: translate(-300px, 0);*/
+    	transform: translate(300, 0);
+    /* Optionally, we animate the drawer. */
+    	transition: transform 1s ease;
+    	background-color: white;
+	}
 	
 	.closebtn {
 		display: inline;

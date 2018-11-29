@@ -12,14 +12,22 @@
 		<div class="header-container colorer">
 			<div id="title">Sign In Page</div>
 			<div class="links-conatiner">
-				<div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
-				<ul class="header-items links">
-					<li><a href="#"> HOME </a></li>
-					<li><a href="#"> CONTACT US </a></li>
-				</ul>	
-				<div class="hamburg">
+				<!-- <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div> -->
+				
+				<nav class="nav_list" id="nav_list">
+					
+					<ul class="links">
+						<li><a href="#"> HOME </a></li>
+						<li><a href="#"> CONTACT US </a></li>
+					</ul>
+				</nav>	
+				<div class="nav_button" id="nav_button">
+					 <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span> -->
+					 <span style="font-size:30px;cursor:pointer" >&#9776;</span>
+          		</div>
+				<!-- <div class="hamburg">
 				<div style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</div>
-			</div>
+			</div> -->
 			</div>
 		</div>
 	</header>
@@ -46,15 +54,24 @@
 	</main>
 
 	<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
+	var menu = document.querySelector('#nav_button');
+	var drawer = document.querySelector('.nav_list');
+	var main = document.querySelector('main');
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        // e.stopPropagation();
+      });
+      // main.addEventListener('click', function() {
+      //   drawer.classList.remove('open');
+      // });
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
+ //      //function openNav() {
+
+ //    		// document.getElementById("nav_list").style.width = "250px";
+ //    		// document.getElementById("nav_list").style.marginLeft = "250px";
+ //    		// document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+ //    		// document.getElementById("nav_list").style.zIndex = "10";
+	// //}
 </script>
 </body>
 </html>
