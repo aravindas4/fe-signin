@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign In Page</title>
+	<link rel="stylesheet" href="home.css">
+	<meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+</head>
+<body>
+	<header>
+		<div class="header-container colorer">
+			<div id="title">Sign In Page</div>
+			<div class="links-conatiner">
+				<div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+				<ul class="header-items links">
+					<li><a href="#"> HOME </a></li>
+					<li><a href="#"> CONTACT US </a></li>
+				</ul>	
+				<div class="hamburg">
+				<div style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</div>
+			</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section>
+			<div class="main-container">
+			<div id="image"><img src="fs.jpg" alt="full stack details"/></div>
+
+				<div id="text">
+					<p>For members, We have here full of surprises! Tools Projects Whitepapers and many more</p>
+				</div>
+				<div class="sign-container colorer">
+					
+					<form action="">
+						<div><input type="text" placeholder="USERNAME"></div>
+						<div><input type="password" placeholder="PASSWORD"></div>
+						<button id="button">Log In</div>
+					</form>	
+					
+				</div>
+			</div>
+			
+		</section>
+	</main>
+
+	<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>
